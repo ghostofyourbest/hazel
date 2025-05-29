@@ -139,5 +139,3 @@ if __name__ == "__main__":
         start_fee=100.00,
         end_fee=200.00
         )
-    
-print(test.df)
