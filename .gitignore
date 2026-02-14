@@ -34,6 +34,7 @@ env/
 # Output files
 *.parquet
 savings_rates_*.parquet
+demo_output.parquet
 
 # OS
 .DS_Store
