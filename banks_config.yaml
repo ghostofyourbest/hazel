@@ -1,0 +1,31 @@
+# Configuration file for UK Bank savings rate scraping
+# Each bank entry should contain:
+#   name: Bank name
+#   url: URL to scrape
+#   selectors: CSS selectors or XPath to find AER rates for 1 Year Fixed savings products
+
+banks:
+  - name: "Secure Trust Bank"
+    url: "https://www.securetrustbank.com/savings"
+    product_type: "1 Year Fixed"
+    # CSS selectors for extracting rates (these would need to be updated based on actual website structure)
+    selectors:
+      container: ".savings-product, .product-card, .rate-table"
+      product_name: ".product-name, .product-title, h3, h4"
+      aer_rate: ".aer-rate, .rate, .interest-rate"
+    
+  - name: "Metro Bank"
+    url: "https://www.metrobankonline.co.uk/savings"
+    product_type: "1 Year Fixed"
+    selectors:
+      container: ".savings-product, .product-card"
+      product_name: ".product-name, h3"
+      aer_rate: ".aer, .rate"
+    
+  - name: "Shawbrook Bank"
+    url: "https://www.shawbrook.co.uk/savings"
+    product_type: "1 Year Fixed"
+    selectors:
+      container: ".product, .rate-card"
+      product_name: ".product-title, h3"
+      aer_rate: ".aer-rate, .rate"
